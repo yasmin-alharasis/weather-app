@@ -1,11 +1,10 @@
 import React from "react";
-import "./form.style.css";
+ import "./form.style.css";
 
 const Form = props => {
   return (
-    <div className="container h-100">
+    <div className="container">
       <form onSubmit={props.loadweather}>
-        <div>{props.error ? error() : ""}</div>
         <div className="row">
           <div className="col-md-3 offset-md-2">
             <input
@@ -34,12 +33,6 @@ const Form = props => {
   );
 };
 
-const error = props => {
-  return (
-    <div className="alert alert-danger mx-5" role="alert">
-      Please Enter City and Country...!
-    </div>
-  );
-};
+
 
 export default Form;
